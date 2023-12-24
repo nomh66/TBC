@@ -1,0 +1,288 @@
+@font-face {
+  font-family: Fold;
+  src: url(/Font/SpecialElite-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: "Fold";
+  background-color: blanchedalmond;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Deathbat {
+  width: 200px;
+  transition: ease-in-out;
+  animation: bounce 4s infinite;
+}
+
+.Deathbat:hover {
+  animation: scale 4s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  0%,
+  20%,
+  40% {
+    transform: translateY(5%);
+  }
+
+  60%,
+  80% {
+    scale: 1.5;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.container nav ol {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.container nav ol li {
+  margin-right: 100px;
+  font-size: 26px;
+}
+
+.container nav ol li a {
+  text-decoration: none;
+  color: rgb(85, 82, 82);
+  margin-left: auto;
+}
+
+.Fiever {
+  transition: 200ms ease-in-out;
+  font-weight: 600;
+}
+
+.Fiever:hover {
+  transform: translateY(-20%);
+}
+
+.Icons {
+  width: 30px;
+  height: 30px;
+  transition: 200ms ease-in-out;
+}
+
+.Icons:hover {
+  transform: translateY(-20%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 10px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide:hover img {
+  filter: blur(5px);
+}
+
+.slide:hover p {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.slide:hover .centered1 {
+  opacity: 0;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 3rem;
+}
+
+.carousel-button.next {
+  right: 3rem;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(248, 248, 247);
+  font-weight: 500;
+  font-size: 36px;
+  transition: 200ms ease-in;
+  opacity: 0;
+  text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
+    1px 1px 0 #363636;
+}
+
+.centered1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 50px;
+  transition: 200ms ease-out;
+}
+
+.centered2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: wheat;
+  font-weight: 500;
+  font-size: 26px;
+  transition: 200ms ease-in;
+  opacity: 0;
+  text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
+    1px 1px 0 #363636;
+}
+
+.container1 {
+  height: 100vh;
+  position: relative;
+  top: 20px;
+  text-decoration: none;
+}
+
+.container1 img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Text {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.Album-Container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 150px;
+}
+
+.Albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.Albums img {
+  width: 250px;
+  transition: 200ms ease-in-out;
+}
+
+.Albums h3 {
+  transition: 200ms ease-out;
+}
+
+.Albums p {
+  opacity: 0;
+  transition: 200ms ease-in;
+  font-size: 16px;
+  color: white;
+  text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
+    1px 1px 0 #363636;
+}
+
+.Albums:hover img {
+  transform: translateY(15%);
+}
+
+.Albums:hover h3 {
+  opacity: 0;
+}
+
+.Albums:hover p {
+  opacity: 1;
+}
+
+.IMakeSomeSpace {
+  margin-bottom: 200px;
+}
