@@ -1,0 +1,393 @@
+@font-face {
+    font-family: Fold;
+    src: url(/Font/SpecialElite-Regular.ttf);
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Fold";
+    background-color: blanchedalmond;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .Deathbat {
+    width: 200px;
+    transition: ease-in-out;
+    animation: bounce 4s infinite;
+  }
+  
+  .Deathbat:hover {
+    animation: scale 4s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes scale {
+    0%,
+    20%,
+    40% {
+      transform: translateY(5%);
+    }
+  
+    60%,
+    80% {
+      scale: 1.5;
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .container nav ol {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .container nav ol li {
+    margin-right: 100px;
+    font-size: 26px;
+  }
+  
+  .container nav ol li a {
+    text-decoration: none;
+    color: rgb(85, 82, 82);
+    margin-left: auto;
+  }
+  
+  .Fiever {
+    transition: 200ms ease-in-out;
+    font-weight: 600;
+  }
+  
+  .Fiever:hover {
+    transform: translateY(-20%);
+  }
+  
+  .Icons {
+    width: 30px;
+    height: 30px;
+    transition: 200ms ease-in-out;
+  }
+  
+  .Icons:hover {
+    transform: translateY(-20%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 10px;
+  }
+  
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+  
+  .slide > img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 3rem;
+  }
+  
+  .carousel-button.next {
+    right: 3rem;
+  }
+  
+  .Text {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .JustFlex {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+  }
+  
+  .JustFlex1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container1 {
+    height: 100vh;
+    position: relative;
+    top: 20px;
+  }
+  
+  .container1 img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .container1:hover img {
+    filter: blur(3px);
+  }
+  
+  .container1:hover .centered {
+    transform: translateY(-170%);
+    transform: translateX(-50%);
+  }
+  
+  .container1:hover .centered1 {
+    transform: translateY(170%);
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  
+  .container1:hover .LearnMore {
+    opacity: 1;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: wheat;
+    font-weight: 500;
+    font-size: 36px;
+    transition: 200ms ease-out;
+  }
+  
+  .centered1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 30px;
+    transition: 200ms ease-out;
+  }
+  
+  .Merch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    font-weight: 600;
+  }
+  
+  .Merch img {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+  }
+  
+  .Merch:hover img {
+    scale: 1.1;
+  }
+  
+  .LearnMore {
+    font-family: "Fold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+    width: 235px;
+    height: 60px;
+    bottom: 400px;
+    left: 830px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(29, 26, 26);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+  }
+  
+  .LearnMore p {
+    color: whitesmoke;
+  }
+  
+  .LearnMore:hover {
+    background-color: rgb(17, 15, 15);
+  }
+  
+  .IMakeSomeSpace {
+    margin-bottom: 200px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    .container nav ol li {
+      margin-right: 95px;
+      font-size: 14px;
+    }
+  
+    .slide > img {
+      display: block;
+      width: 42rem;
+      height: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .Deathbat {
+      width: 150px;
+      transition: ease-in-out;
+      animation: bounce 4s infinite;
+    }
+    
+    .Text {
+      display: flex;
+      justify-content: center;
+      margin-left: 500px; 
+      margin-bottom: 60px;
+      font-size: 56px;
+    }
+    
+    .JustFlex1 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .container1 {
+      height: 100vh;
+      position: relative;
+      top: 20px;
+    }
+    
+    .container1 img {
+      width: 50rem;
+      height: 80%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .centered {
+      position: absolute;
+      top: 20%;
+      left: 150%;
+      transform: translate(-50%, -50%);
+      color: wheat;
+      font-weight: 500;
+      font-size: 36px;
+      transition: 200ms ease-out;
+    }
+    
+    .centered1 {
+      position: absolute;
+      top: 35%;
+      left: 150%;
+      transform: translate(-50%, -50%);
+      color: whitesmoke;
+      font-weight: 500;
+      font-size: 30px;
+      transition: 200ms ease-out;
+    }
+  
+    .LearnMore {
+      font-family: "Fold";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: inherit;
+      width: 235px;
+      height: 60px;
+      bottom: 350px;
+      left: 115%;
+      border-radius: 5px;
+      border-style: none;
+      background-color: rgb(29, 26, 26);
+      cursor: pointer;
+      transition: 200ms ease-in-out;
+      opacity: 0;
+    }
+  
+    .JustFlex {
+      display: flex;
+      flex-direction: column;
+      margin-left: 500px;
+      gap: 120px;
+    }
+
+    .Merch p{
+        font-size: 24px;
+    }
+  }
