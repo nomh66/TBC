@@ -147,4 +147,34 @@
       animation: bounce 4s infinite;
     }
 
+    .Contact-Flex {
+      display: flex;
+      justify-content: space-between;
+      width: 50rem;
+      height: 350px;
+      background-color: rgb(252, 226, 190);
+    }
+    
+    .Contact li {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 18px;
+      color: black;
+    }
+    
+    .Contact-Icon {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .Contact-End-1 {
+      display: flex;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+    
+    .Contact-End-1 img {
+      margin-left: 10px;
+    }
   }

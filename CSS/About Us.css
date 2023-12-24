@@ -226,7 +226,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .slide > img {
-    width: 65rem;
+    width: 67rem;
     height: 80%;
     object-fit: cover;
     object-position: center;
@@ -265,7 +265,7 @@ a {
   .centered1 {
     position: absolute;
     top: 25%;
-    left: 250%;
+    left: 200%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
     font-weight: 500;
