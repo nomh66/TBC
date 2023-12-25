@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: Fold;
   src: url(/Font/SpecialElite-Regular.ttf);
@@ -8,9 +15,15 @@ body {
   background-color: wheat;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
 }
 
@@ -18,7 +31,8 @@ form {
   background-color: blanchedalmond;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
   width: 300px;
 }
 
@@ -31,7 +45,8 @@ input {
   width: 100%;
   padding: 8px;
   margin-bottom: 12px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button {

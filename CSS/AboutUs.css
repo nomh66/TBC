@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: Fold;
   src: url(/Font/SpecialElite-Regular.ttf);
@@ -15,12 +22,35 @@ a {
 
 .Deathbat {
   width: 200px;
+  -webkit-transition: ease-in-out;
+  -o-transition: ease-in-out;
   transition: ease-in-out;
-  animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+          animation: bounce 4s infinite;
 }
 
 .Deathbat:hover {
-  animation: scale 4s infinite;
+  -webkit-animation: scale 4s infinite;
+          animation: scale 4s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  60% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 
 @keyframes bounce {
@@ -29,13 +59,30 @@ a {
   50%,
   80%,
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   40% {
-    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
   }
   60% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes scale {
+  0%,
+  20%,
+  40% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+
+  60%,
+  80% {
+    scale: 1.5;
   }
 }
 
@@ -43,7 +90,8 @@ a {
   0%,
   20%,
   40% {
-    transform: translateY(5%);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
   }
 
   60%,
@@ -53,15 +101,23 @@ a {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
 }
 
 .container nav ol {
   list-style-type: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -77,28 +133,37 @@ a {
 }
 
 .Fiever {
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   font-weight: 600;
 }
 
 .Fiever:hover {
-  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 .Icons {
   width: 30px;
   height: 30px;
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
 
 .Icons:hover {
-  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .carousel {
@@ -118,24 +183,33 @@ a {
   position: absolute;
   inset: 0;
   opacity: 0;
+  -webkit-transition: 200ms opacity ease-in-out;
+  -o-transition: 200ms opacity ease-in-out;
   transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
+  -webkit-transition-delay: 200ms;
+       -o-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 
 .slide > img {
   width: 100%;
   height: 80%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .slide:hover img {
-  filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .slide:hover p {
   opacity: 1;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slide:hover .centered1 {
@@ -145,7 +219,9 @@ a {
 .slide[data-active] {
   opacity: 1;
   z-index: 1;
-  transition-delay: 0ms;
+  -webkit-transition-delay: 0ms;
+       -o-transition-delay: 0ms;
+          transition-delay: 0ms;
 }
 
 .carousel-button {
@@ -155,7 +231,9 @@ a {
   border: none;
   font-size: 3rem;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   border-radius: 0.25rem;
@@ -185,10 +263,14 @@ a {
   position: absolute;
   top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: rgb(248, 248, 247);
   font-weight: 500;
   font-size: 36px;
+  -webkit-transition: 200ms ease-in;
+  -o-transition: 200ms ease-in;
   transition: 200ms ease-in;
   opacity: 0;
   text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
@@ -199,10 +281,14 @@ a {
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: whitesmoke;
   font-weight: 500;
   font-size: 50px;
+  -webkit-transition: 200ms ease-out;
+  -o-transition: 200ms ease-out;
   transition: 200ms ease-out;
 }
 
@@ -210,10 +296,14 @@ a {
   position: absolute;
   top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: wheat;
   font-weight: 500;
   font-size: 26px;
+  -webkit-transition: 200ms ease-in;
+  -o-transition: 200ms ease-in;
   transition: 200ms ease-in;
   opacity: 0;
   text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
@@ -228,8 +318,10 @@ a {
   .slide > img {
     width: 67rem;
     height: 80%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 
   .carousel-button {
@@ -240,7 +332,9 @@ a {
     font-size: 5rem;
     top: 40%;
     margin-right: -800px;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     border-radius: 0.25rem;
@@ -252,10 +346,14 @@ a {
     position: absolute;
     top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: rgb(248, 248, 247);
     font-weight: 500;
     font-size: 20px;
+    -webkit-transition: 200ms ease-in;
+    -o-transition: 200ms ease-in;
     transition: 200ms ease-in;
     opacity: 0;
     text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
@@ -266,10 +364,14 @@ a {
     position: absolute;
     top: 25%;
     left: 200%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: whitesmoke;
     font-weight: 500;
     font-size: 36px;
+    -webkit-transition: 200ms ease-out;
+    -o-transition: 200ms ease-out;
     transition: 200ms ease-out;
   }
   
@@ -277,10 +379,14 @@ a {
     position: absolute;
     top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: wheat;
     font-weight: 500;
     font-size: 16px;
+    -webkit-transition: 200ms ease-in;
+    -o-transition: 200ms ease-in;
     transition: 200ms ease-in;
     opacity: 0;
     text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
