@@ -349,7 +349,7 @@ li {
 
   .slide > img {
     display: block;
-    width: 48rem;
+    width: 50rem;
     height: 50%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -373,7 +373,7 @@ li {
     border: none;
     font-size: 2rem;
     top: 30%;
-    margin-right: -460px;
+    margin-right: -410px;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
