@@ -243,7 +243,6 @@ a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 150px;
 }
 
 .Albums {
@@ -279,9 +278,7 @@ a {
   -o-transition: 200ms ease-in;
   transition: 200ms ease-in;
   font-size: 16px;
-  color: white;
-  text-shadow: -1px -1px 0 #2e2d2d, 1px -1px 0 #494848, -1px 1px 0 #424141,
-    1px 1px 0 #363636;
+  color: rgb(0, 0, 0);
 }
 
 .Albums:hover img {
@@ -349,8 +346,7 @@ a {
     -o-transition: 200ms ease-in;
     transition: 200ms ease-in;
     font-size: 16px;
-    color: white;
-    
+    color: rgb(0, 0, 0);    
   }
   
   .container1{
