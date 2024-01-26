@@ -207,6 +207,19 @@ li {
 
 .Contact-End-1 img {
   margin-left: 10px;
+  transition: 100ms;
+}
+
+.Contact-End-1 img:hover{
+  scale: 1.35;
+}
+
+ul li{
+  transition: 200ms;
+}
+
+ul li:hover{
+  transform: translateX(20px);
 }
 
 @media screen and (max-width: 768px) {
